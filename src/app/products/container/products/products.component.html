@@ -1,1 +1,10 @@
-<p>products works!</p>
+
+
+<ul>
+    <li *ngFor="let product of products$|async">
+        <h3>{{product?.name}}</h3>
+        <span style="background-color:white; height: 200px;">
+            <img (click)="addToCard()" src="assets/images/{{ product.image }}.jpg" height="245px">
+          </span>
+    </li>
+</ul>

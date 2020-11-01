@@ -1,0 +1,9 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+
+    > li{
+        width: 20rem;
+        height: 20rem;
+    }
+}

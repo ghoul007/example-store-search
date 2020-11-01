@@ -51,3 +51,8 @@ export const deleteProductss = createAction(
 export const clearProductss = createAction(
   '[Products/API] Clear Productss'
 );
+
+export const searchProduct = createAction(
+  '[Products/API] Search Product',
+  props<{ searchQuery: string}>()
+);

@@ -4,6 +4,7 @@ import { select, Store } from '@ngrx/store';
 import * as fromStore from '../../store/header.reducer';
 import * as fromHeaderSelector from '../../store/header.selectors';
 import * as fromHeaderActions from '../../store/header.actions';
+import * as fromProductActions from '../../../products/store/products.actions';
 import { FormControl } from '@angular/forms';
 import { debounce, debounceTime, map, tap } from "rxjs/operators"
 @Component({
@@ -24,7 +25,7 @@ export class HeaderComponent implements OnInit {
       debounceTime(200),
       tap(val => {
         console.log(val);
-      })).subscribe(val=> this.store.dispatch(fromHeaderActions.addToCard()))
+      })).subscribe(searchQuery=> this.store.dispatch(fromProductActions.searchProduct({searchQuery})))
     this.count$ = this.store.pipe(select(fromHeaderSelector.selectHeaderCount))
   }
 
