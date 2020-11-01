@@ -1,8 +1,10 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import * as fromHeader from './store/header.reducer';
 import { HeaderComponent } from './header/header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,6 +13,8 @@ import { HeaderComponent } from './header/header/header.component';
   exports: [HeaderComponent],
   imports: [
     CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
     StoreModule.forFeature(fromHeader.headerFeatureKey, fromHeader.reducer)
   ]
 })

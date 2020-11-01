@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 
-export const loadHeaders = createAction(
-  '[Header] Load Headers'
+export const addToCard = createAction(
+  '[Header] Add to Card'
 );
 
 
