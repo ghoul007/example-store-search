@@ -5,11 +5,12 @@ import * as fromProduct from './store';
 import * as fromProducts from './store/products.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductEffects } from './store/product.effects';
+import { ProductsComponent } from './container/products/products.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ProductsComponent],
   imports: [
     CommonModule,
     StoreModule.forFeature(fromProduct.productFeatureKey, fromProduct.reducers, { metaReducers: fromProduct.metaReducers }),
